@@ -58,7 +58,7 @@ class ModelRouter:
 
         # 实例化 OpenAI 客户端（因为 DeepSeek 和智谱都兼容 OpenAI 协议）
         client = OpenAI(
-            api_key=api_key,
+            api_key = "k-816ba0f215374936a62dddaae3a81a52",
             base_url=route_config.get("base_url")
         )
         
