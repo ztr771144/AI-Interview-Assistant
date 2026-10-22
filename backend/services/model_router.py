@@ -51,14 +51,14 @@ class ModelRouter:
 
         # 从环境变量中读取对应的 API Key
         api_key_env = route_config.get("api_key_env")
-        api_key = os.getenv(api_key_env)
+        api_key = "sk-816ba0f215374936a62dddaae3a81a52"
         
         if not api_key:
             raise ValueError(f"环境变量中缺少 API Key: {api_key_env}，请检查 .env 文件")
 
         # 实例化 OpenAI 客户端（因为 DeepSeek 和智谱都兼容 OpenAI 协议）
         client = OpenAI(
-            api_key = "k-816ba0f215374936a62dddaae3a81a52",
+            api_key = "sk-816ba0f215374936a62dddaae3a81a52",
             base_url=route_config.get("base_url")
         )
         
